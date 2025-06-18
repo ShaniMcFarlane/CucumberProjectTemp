@@ -4,7 +4,7 @@ import io.cucumber.scala.{EN, PendingException, ScalaDsl}
 import org.openqa.selenium.{By, WebDriver}
 import org.openqa.selenium.chrome.ChromeDriver
 
-import scala.concurrent.duration.Duration
+import java.time.Duration
 
 class Login1 extends ScalaDsl with EN {
 
