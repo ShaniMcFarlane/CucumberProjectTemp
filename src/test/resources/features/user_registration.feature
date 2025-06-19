@@ -11,13 +11,14 @@ Feature: User Registration
   Background:
     Given the user is on the registration page
 
-  Scenario: the user successfully registers
+  Scenario Outline: the user successfully registers
 
-    When the user fills the registration form by inputing valid credentials:
-      | name  | email                 | password     |
-      | Shani | shani.email@email.com | password1234 |
+    When the user fills the registration form by inputing valid <name> , <email> and <password>:
     And the user clicks the submit button
     Then the user will successfully create an account
     And see the "registration successful" message
 
+    Examples:
+      | name  | email                 | password     |
+      | Shani | shani.email@email.com | password1234 |
 
